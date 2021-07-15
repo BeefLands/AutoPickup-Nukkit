@@ -25,8 +25,10 @@ public class AutoPickup extends PluginBase {
         saveDefaultConfig();
         Config config = getConfig();
 
-        if(config.getInt("version") < configVersion)
-            logger.warning("The config file of " + this.getName() + " is outdated, please delete the old config.yml file.");
+        if(config.getInt("version") < configVersion) {
+            logger.error("The config file of " + this.getName() + " is outdated, please delete the old config.yml file.");
+            this.setEnabled(false);
+        }
 
         this.getServer().getPluginManager().registerEvents(new EventListener(), this);
     }
