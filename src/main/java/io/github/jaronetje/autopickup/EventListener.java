@@ -25,6 +25,7 @@ public class EventListener implements Listener {
 
         boolean sentWarning = false;
 
+        // Automatically add items
         for (Item item : event.getDrops()) {
             boolean canAddItem = inventory.canAddItem(item);
 
@@ -37,6 +38,13 @@ public class EventListener implements Listener {
                 if(canAddItem) inventory.addItem(item);
                 event.setDrops(new Item[]{Item.get(0)});
             }
+        }
+
+        // Automatically add exp if enabled
+        int exp = event.getDropExp();
+        if(config.getBoolean("pickupExp") && exp > 0){
+            player.addExperience(exp);
+            event.setDropExp(0);
         }
     }
 }

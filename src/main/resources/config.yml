@@ -1,10 +1,12 @@
 # Config version, do not edit this!
-version: 1
+version: 2
 
 # Whether the user needs to use a tool for auto pickup to work
 needsTool: false
 # Whether items should be dropped when a users inventory is full
 dropItems: true
+# Whether exp should automatically be picked up
+pickupExp: true
 
 # The text that gets shown when a users inventory is full
 # § can be used for colors
