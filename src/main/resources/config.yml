@@ -1,0 +1,16 @@
+# Config version, do not edit this!
+version: 1
+
+# Whether the user needs to use a tool for auto pickup to work
+needsTool: false
+# Whether items should be dropped when a users inventory is full
+dropItems: true
+
+# The text that gets shown when a users inventory is full
+# § can be used for colors
+fullTitle: "§4Inventory Full"
+fullText: "§4Your inventory is full!"
+
+# The worlds to use auto pickup in
+worlds:
+  - "exampleWorld"

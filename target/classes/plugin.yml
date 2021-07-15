@@ -1,0 +1,7 @@
+name: AutoPickup
+main: io.github.jaronetje.autopickup.AutoPickup
+version: "1.0.0"
+api: ["1.0.0"]
+
+author: JaronZ
+description: Plugin to automatically pickup items in specific worlds
